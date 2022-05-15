@@ -1,7 +1,7 @@
 import numpy
-
-import imagehash
 from PIL import Image, ImageFilter
+
+from imagehash import hashfunc as imagehash
 
 IMAGE_FILE = "../tests/data/peppers.png"
 IMG_SIZE = 300

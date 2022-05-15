@@ -1,5 +1,6 @@
-import imagehash
 from PIL import Image
+
+import imagehash
 
 SAVE_IMAGES = False
 

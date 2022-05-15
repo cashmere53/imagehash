@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "imagehash"
+version = "4.2.1"
+description = "Image Hashing library"
+authors = "Johannes Buchner <buchner.johannes@gmx.at>"
+maintainer = [
+    "Cashmere53 <15913755+cashmere53@users.noreply.github.com>"
+]
+readme = "README.rst"
+license = "BSD-2-Clause"
+repository = "https://github.com/cashmere53/imagehash"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+numpy = "^1.22.3"
+Pillow = "^9.1.0"
+PyWavelets = "^1.3.0"
+scipy = "^1.8.0"
+
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+mypy = "^0.942"
+pyproject-flake8 = "^0.0.1-alpha.4"
+flake8-bugbear = "^22.3.23"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+find_similar_image = "find_similar_image:main"
+
+
+[tool.black]
+target-version = ["py310"]
+line-length = 120
+
+
+[tool.isort]
+profile = "black"
+line_length = 120
+multi_line_output = 3
+include_trailing_comma = true
+known_local_folder = ["config",]
+
+
+[tool.flake8]
+max-line-length = 120
+max-complexity = 10
+ignore = "E203,E266,W503,"
+
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+strict_equality = true
+plugins = "numpy.typing.mypy_plugin"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests",]
+filterwarnings = ["ignore::DeprecationWarning",]

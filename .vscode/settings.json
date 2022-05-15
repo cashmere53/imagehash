@@ -1,0 +1,35 @@
+{
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "${workspaceFolder}/.venv/Scripts/black",
+    "python.formatting.blackArgs": [],
+    "python.linting.lintOnSave": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "${workspaceFolder}/.venv/Sctipts/flake8",
+    "python.linting.flake8Args": [],
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "${workspaceFolder}/.venv/Scripts/mypy",
+    "python.linting.mypyArgs": [],
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+    "cSpell.words": [
+        "asarray",
+        "astype",
+        "coeffs",
+        "Daubechies",
+        "discretize",
+        "dtype",
+        "fftpack",
+        "LANCZOS",
+        "ndarray",
+        "neighbour's",
+        "neighbours",
+        "pywt",
+        "scipy",
+        "segmentations"
+    ],
+}
